@@ -15,7 +15,7 @@ function execute(db) {
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             subject TEXT,
             cost TEXT,
-            proffys_id INTEGER
+            proffy_id INTEGER
         );
 
         CREATE TABLE IF NOT EXISTS class_schedule (
@@ -28,4 +28,4 @@ function execute(db) {
     `)
 }
 
-Database.open(__dirname + '/database.sqlite').then(execute)
+module.exports = Database.open(__dirname + '/database.sqlite').then(execute)
